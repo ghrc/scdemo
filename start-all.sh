@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #首先开启eureka，上篇文章中我们把eureka放在集群上，并单独写了一个脚本了，这里不在赘述
 #然后开启zuul
 cd /home/linjiaqin/log_stream_platform/source/scdemo/gateway;
@@ -11,3 +12,7 @@ cd /home/linjiaqin/log_stream_platform/source/scdemo/provider
 nohup mvn spring-boot:run -Dserver.port=20001 > /dev/null 2>&1  &
 nohup mvn spring-boot:run -Dserver.port=20002 > /dev/null 2>&1  &
 nohup mvn spring-boot:run -Dserver.port=20003 > /dev/null 2>&1  &
+#开启两个config server
+cd /home/linjiaqin/log_stream_platform/source/scdemo/configserver
+nohup mvn spring-boot:run -Dserver.port=40001 > /dev/null 2>&1  &
+nohup mvn spring-boot:run -Dserver.port=40002 > /dev/null 2>&1  &
