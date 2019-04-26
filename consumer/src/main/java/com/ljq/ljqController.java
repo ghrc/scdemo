@@ -22,8 +22,6 @@ public class ljqController {
     @GetMapping(value = "/hello")
     public String hello(HttpServletRequest request){
         logger.info("hello function");
-//        RequestContext ctx = RequestContext.getgetCurrentContext();
-//        HttpServletRequest request = ctx.getRequest();
         logger.info(request.getPathInfo());
         logger.info("--->>> consumer contorller {},{}", request.getMethod(), request.getRequestURL().toString());
 
