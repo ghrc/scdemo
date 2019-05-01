@@ -16,10 +16,6 @@ HELP.md
 *.iws
 *.iml
 *.ipr
-*.mvn
-*mvnw
-*mvnw.cmd
-*HELP.md
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,5 +27,3 @@ HELP.md
 
 ### VS Code ###
 .vscode/
-src/main/resources/static/
-src/main/resources/templates/
